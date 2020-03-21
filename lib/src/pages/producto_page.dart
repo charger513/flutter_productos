@@ -156,13 +156,18 @@ class _ProductoPageState extends State<ProductoPage> {
 
   Widget _mostrarFoto() {
     if(producto.fotoUrl != null) {
-      return Container();
-    } else {
-      return Image(
-        image: AssetImage( foto?.path ?? 'assets/img/no-image.png'),
-        height: 300.0,
-        fit: BoxFit.cover,
+      return Container(
+        child: Center(child: Text('Foto URL'))
       );
+    } else {
+      if( foto != null ){
+        return Image.file(
+          foto,
+          fit: BoxFit.cover,
+          height: 300.0,
+        );
+      }
+      return Image.asset('assets/img/no-image.png');
     }
   }
 
