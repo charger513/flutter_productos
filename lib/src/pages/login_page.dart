@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_productos/src/bloc/provider.dart';
 import 'package:flutter_productos/src/providers/usuario_provider.dart';
+import 'package:flutter_productos/src/utils/utils.dart' as utils;
 
 class LoginPage extends StatelessWidget {
 
@@ -97,9 +98,14 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  _login(LoginBloc bloc, BuildContext context) {
-    usuarioProvider.login(bloc.email, bloc.password);
-    // Navigator.pushReplacementNamed(context, 'home');
+  _login(LoginBloc bloc, BuildContext context) async {
+    Map info = await usuarioProvider.login(bloc.email, bloc.password);
+
+    if(info['ok']) {
+      Navigator.pushReplacementNamed(context, 'home');
+    } else {
+      utils.mostrarAlerta(context, info['mensaje']);
+    }
   }
 
   Widget _crearEmail(LoginBloc bloc) {
