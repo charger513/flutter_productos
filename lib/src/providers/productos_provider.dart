@@ -2,7 +2,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http_parser/http_parser.dart';
-import 'package:flutter_formvalidation/src/models/producto_model.dart';
+import 'package:flutter_productos/src/models/producto_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:mime_type/mime_type.dart';
 

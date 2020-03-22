@@ -1,4 +1,4 @@
-package com.example.flutter_formvalidation
+package com.example.flutter_productos
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

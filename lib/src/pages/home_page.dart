@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_formvalidation/src/bloc/provider.dart';
-import 'package:flutter_formvalidation/src/models/producto_model.dart';
-import 'package:flutter_formvalidation/src/providers/productos_provider.dart';
+import 'package:flutter_productos/src/bloc/provider.dart';
+import 'package:flutter_productos/src/models/producto_model.dart';
+import 'package:flutter_productos/src/providers/productos_provider.dart';
 
 class HomePage extends StatelessWidget {
   final productosProvider = new ProductosProvider();

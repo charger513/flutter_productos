@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_formvalidation/src/bloc/validators.dart';
+import 'package:flutter_productos/src/bloc/validators.dart';
 import 'package:rxdart/rxdart.dart';
 
 class LoginBloc with Validators{

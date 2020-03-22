@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_formvalidation/src/models/producto_model.dart';
-import 'package:flutter_formvalidation/src/providers/productos_provider.dart';
-import 'package:flutter_formvalidation/src/utils/utils.dart' as utils;
+import 'package:flutter_productos/src/models/producto_model.dart';
+import 'package:flutter_productos/src/providers/productos_provider.dart';
+import 'package:flutter_productos/src/utils/utils.dart' as utils;
 import 'package:image_picker/image_picker.dart';
 
 class ProductoPage extends StatefulWidget {
