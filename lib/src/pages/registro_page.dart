@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_productos/src/bloc/provider.dart';
 
-class LoginPage extends StatelessWidget {
+class RegistroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
             ),
             child: Column(
               children: <Widget>[
-                Text('Ingreso', style: TextStyle(fontSize: 20.0)),
+                Text('Crear cuenta', style: TextStyle(fontSize: 20.0)),
                 SizedBox(height: 60.0),
                 _crearEmail(bloc),
                 SizedBox(height: 30.0),
@@ -60,8 +60,8 @@ class LoginPage extends StatelessWidget {
           // Text('¿Olvidó la contraseña?'),
 
           FlatButton(
-            child: Text('Crear una nueva cuenta'),
-            onPressed: () => Navigator.pushReplacementNamed(context, 'registro'),
+            child: Text('¿Ya tienes cuenta? Logueate'),
+            onPressed: () => Navigator.pushReplacementNamed(context, 'login'),
           ),
 
           SizedBox(height: 100.0)
@@ -78,7 +78,7 @@ class LoginPage extends StatelessWidget {
           child: RaisedButton(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
-              child: Text('Ingresar'),
+              child: Text('Registrar'),
             ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5.0)

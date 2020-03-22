@@ -3,6 +3,7 @@ import 'package:flutter_productos/src/bloc/provider.dart';
 import 'package:flutter_productos/src/pages/home_page.dart';
 import 'package:flutter_productos/src/pages/login_page.dart';
 import 'package:flutter_productos/src/pages/producto_page.dart';
+import 'package:flutter_productos/src/pages/registro_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,9 +13,10 @@ class MyApp extends StatelessWidget {
     return Provider(
       child: MaterialApp(
         title: 'Material App',
-        initialRoute: 'home',
+        initialRoute: 'login',
         routes: {
           'login': (BuildContext context) => LoginPage(),
+          'registro': (BuildContext context) => RegistroPage(),
           'home': (BuildContext context) => HomePage(),
           'producto': (BuildContext context) => ProductoPage(),
         },
