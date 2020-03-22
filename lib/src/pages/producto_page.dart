@@ -162,7 +162,9 @@ class _ProductoPageState extends State<ProductoPage> {
     if(producto.fotoUrl != null) {
       return FadeInImage(
         image: NetworkImage(producto.fotoUrl),
-        placeholder: AssetImage('assets/img/jar-loading.gif')
+        placeholder: AssetImage('assets/img/jar-loading.gif'),
+        height: 300.0,
+        fit: BoxFit.contain
       );
     } else {
       if( foto != null ){
@@ -190,7 +192,7 @@ class _ProductoPageState extends State<ProductoPage> {
     );
 
     if(foto != null) {
-      // Limpieza
+      producto.fotoUrl = null;
     }
 
     setState(() { });
