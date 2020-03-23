@@ -44,6 +44,9 @@ class ProductosProvider {
 
     if(decodedData == null) return [];
 
+    // para saber si el token expiró
+    if(decodedData['error'] != null) return [];
+
     decodedData.forEach((id, prod) {
       final prodTemp = ProductoModel.fromJson(prod);
       prodTemp.id = id;
