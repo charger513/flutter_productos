@@ -4,7 +4,7 @@ import 'package:flutter_productos/src/models/producto_model.dart';
 import 'package:flutter_productos/src/providers/productos_provider.dart';
 import 'package:rxdart/rxdart.dart';
 
-class ProductosBLoc {
+class ProductosBloc {
 
   final _productosController = new BehaviorSubject<List<ProductoModel>>();
   final _cargandoController = new BehaviorSubject<bool>();
